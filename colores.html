@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		var color = generarColor(prompt("Ingrese el nombre de un color en español"));
+		var mensaje = prompt("Ingrese la frase");
+
+		document.write("<p style='color:"+color+"'>"+mensaje+"</p>");
+
+		function generarColor(color){
+			switch(color){
+				case "rojo":
+					return "#FF0000";
+					break;
+
+				case "amarillo":
+					return "#FFFF00";
+					break;
+
+				case "azul":
+					return "#0000FF";
+					break;
+
+				case "verde":
+					return "#008000";
+					break;
+
+				case "naranja":
+					return "#FF8000";
+					break;
+
+				case "violeta":
+					return "#4C2882";
+					break;
+
+				default:
+					return "#000000";
+					break;
+			}
+		}
+
+	</script>
+
+</body>
+</html>

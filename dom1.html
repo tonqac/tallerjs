@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			padding: 1em
+		}
+		#cuadrado{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 20px 0
+		}
+	</style>
+
+</head>
+<body>
+
+	<button onclick="alert('hola chicos')">BOTON1</button>
+
+	<button onclick="mostrarMensaje2()">BOTON2</button> <!-- evento inline -->
+	<button id="boton3">BOTON3</button>					<!-- evento por dom -->
+
+	<div id="cuadrado"></div>
+
+	<script>
+		function mostrarMensaje2(){
+			var nombre = prompt("Ingresa tu nombre");
+			alert("Hola " + nombre);
+		}
+
+		document.getElementById("boton3").onclick = function(){
+			var apellido = prompt("Ingresa tu apellido");
+			alert("Chau " + apellido);
+		}
+
+		
+	</script>
+
+</body>
+</html>

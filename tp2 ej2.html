@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		// Un kiosco vende 10 productos. Mostrar en pantalla el nombre del producto más vendido.
+
+		var producto_mayor = "";
+		var mayor = 0;
+
+		for(i=0;i<5;i++){
+			var producto = prompt("Ingresa el nombre del producto.");
+			var cant = parseInt(prompt("Ingresar la cant vendida."));
+
+			if(cant > mayor){
+				producto_mayor = producto;
+				mayor = cant;
+			}
+
+			console.log(producto,cant);
+		}
+		
+		document.write("el producto mas vendido es " + producto_mayor + " y la cantidad es " + mayor);
+
+	</script>
+
+</body>
+</html>

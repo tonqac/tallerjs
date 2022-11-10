@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		/*
+		Una pizzería despacha pedidos y necesita un sistema para cargar los importes hasta recibir un pedido con importe cero. Mostrar en pantalla el total acumulado durante la jornada.
+		*/
+
+		var pedido;
+		var suma = 0;
+
+		while(pedido!=0){
+
+			pedido = parseInt(prompt("Ingresa el importe del pedido"));
+			suma = suma + pedido;
+
+		}
+
+		document.write("el total de pedidos es $" + suma);
+
+	</script>
+</body>
+</html>

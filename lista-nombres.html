@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.grupo{
+			display: flex;
+		}
+
+		.grupo strong{
+			width: 70px;
+			display: inline-block;
+		}
+
+		.grupo span{
+			width: 100px;
+			display: inline-block;
+			border-bottom: 1px solid #777;
+			margin-right: 10px
+		}
+
+		.grupo i{
+			font-style: normal
+		}
+	</style>
+</head>
+<body>
+
+	<div class="grupo">
+		<strong>Gaston</strong>
+		<span id="edad1"></span>
+		<button onclick="pedirNombre(1)">Clic me</button>
+	</div>
+
+	<div class="grupo">
+		<strong>Pedro</strong>
+		<span id="edad2"></span>
+		<button onclick="pedirNombre(2)">Clic me</button>
+	</div>
+
+	<div class="grupo">
+		<strong>Juana</strong>
+		<span id="edad3"></span>
+		<button onclick="pedirNombre(3)">Clic me</button>
+	</div>
+
+	<div class="grupo">
+		<strong>Rodrigo</strong>
+		<span id="edad4"></span>
+		<button onclick="pedirNombre(4)">Clic me</button>
+	</div>
+
+	<div class="grupo">
+		<strong>Sofia</strong>
+		<span id="edad5"></span>
+		<button onclick="pedirNombre(5)">Clic me</button>
+	</div>
+
+	
+
+	<script>
+		// Mostrar en html una lista de 5 nombres y un botón al lado de cada uno. Al presionar cada botón, se le debe pedir al usuario que ingrese la edad de la persona y mostrarla al lado, entre el nombre y el botón. Si la edad es menor a 17, mostrarla en color rojo. Sino, mostrarla en verde.
+
+		function pedirNombre(numero){
+			var edad = prompt("Decime la edad del usuario");
+			var color = (edad<17)? "red" : "green";
+			
+			document.querySelector("#edad"+numero).innerHTML = "<i style='color:"+color+"'>"+edad+"</i>";
+			
+			/*
+			if(edad<17){
+				document.querySelector("#edad"+numero).innerHTML = "<i style='color:red'>"+edad+"</i>";
+			}
+			else{
+				document.querySelector("#edad"+numero).innerHTML = "<i style='color:green'>"+edad+"</i>";
+
+			}
+			*/
+		}
+
+	</script>
+
+</body>
+</html>

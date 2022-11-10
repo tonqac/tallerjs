@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<button id="stop">Stop</button>
+
+	<script>
+
+		function hacerAlgo(){
+			// Ejecuto cosas
+		}
+
+		/*
+		setTimeout(hacerAlgo, 1000)
+
+		setTimeout(function(){
+			alert("hola ya pasaron 4 segundos");
+		}, 4000)
+		*/
+
+		// Ejecuto cada 1 segundo
+		var timer = setInterval(function(){
+			console.log("hola ya pasó 1 segundo");
+		}, 1000);
+
+
+		// Cuando hago clic en "stop", detengo el timer
+		document.getElementById("stop").onclick = function(){
+			clearInterval(timer);
+		}
+
+
+	</script>
+
+</body>
+</html>

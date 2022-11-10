@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="botones"></div>
+
+	<script>
+		var botones = "";
+		var letras = ["a","b","c","d","g","h","x","z"];
+
+		for(i=0;i<letras.length;i++){
+			botones+= "<button class='boton' onclick='mostrarLetra(\""+letras[i]+"\")'>"+letras[i]+"</button>";
+		}
+
+		document.getElementById("botones").innerHTML = botones;
+
+		function mostrarLetra(x){
+			alert(x);
+		}
+
+	</script>
+
+</body>
+</html>

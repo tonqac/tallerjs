@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		var menor = 9999999; // Para obtener el menor, inicializo la variable en un nro alto
+		var mayor = 0;		 // Para obtener el mayor, inicializo en un nro bajo.
+
+		for(i=0;i<10;i++){
+			var num = parseInt(prompt("Ingresar un nro"));
+
+			console.log(num);
+
+			if(num < menor){
+
+				menor = num;
+
+			}
+
+			if(num > mayor){
+
+				mayor = num;
+
+			}
+		}
+		
+		document.write("<br> el nro menor es " + menor);
+		document.write("<br> el nro mayor es " + mayor);
+
+	</script>
+
+</body>
+</html>

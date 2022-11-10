@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		
+		#tablero{
+			width: 1000px;
+			height: 1000px;
+			position: relative;
+			border:1px solid #777;
+			background-color: #c9c9c9;
+			margin: auto
+		}
+
+		#pacman{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: 0.3s all;
+		}
+
+		#pacman img{
+			width: 100%
+		}
+	</style>
+</head>
+<body>
+
+	<div id="tablero">
+		<div id="pacman">
+			<img src="pacman.gif">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		var pacman = document.querySelector("#pacman");
+		var posx = 0;
+		var posy = 0;
+
+		document.onkeydown = function(event){
+			console.log(event);
+
+			if(event.key=="ArrowLeft"){
+				posx-=100;
+			}
+
+			if(event.key=="ArrowRight"){
+				posx+=100;
+			}
+
+			if(event.key=="ArrowUp"){
+				posy-=100;
+			}
+
+			if(event.key=="ArrowDown"){
+				posy+=100;
+			}
+
+			pacman.setAttribute("style","top:"+posy+"px; left:"+posx+"px");
+		}
+
+	</script>
+
+</body>
+</html>

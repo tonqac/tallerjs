@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	var entradas = [20];
+	var asiento = 0;
+	var z = 1;
+
+	for(i=1; i<=20; i+=2){
+		entradas[i] = prompt("Ingrese su nombre: ");
+		asiento = parseInt(prompt("Ingrese su asiento: "));
+
+		for(z=1; z<=20; z+=2){
+			/*if(asiento == entradas[z+1] || asiento >= 50){
+				while(asiento == entradas[z+1] || asiento >= 50){
+					asiento = parseInt(prompt("Reingrese su asiento: "));
+				}
+			}else{
+				entradas[i+1] = asiento;
+			}*/
+			entradas[i+1] = asiento;
+		}
+	}
+
+	for(i=1; i<=20; i+=2){
+		document.write("El asiento N"+ entradas[i+1] +"esta ocupado por "+ entradas[i] +"</br></br>");
+	}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		button{
+			width: 50px;
+			height: 50px;
+			border:1px solid #000;
+			border-radius: 100%;
+			cursor: pointer;
+		}
+
+		.semaforo{
+			width: 50px;
+			margin: auto;
+			background-color: #333;
+			padding: 1em;
+		}
+
+		.fondoRojo{
+			background-color: red
+		}
+
+		.fondoAmarillo{
+			background-color: yellow
+		}
+
+		.fondoVerde{
+			background-color: green
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="semaforo">
+		<button class="fondoRojo" id="rojo"></button>
+		<button class="fondoAmarillo" id="amarillo"></button>
+		<button class="fondoVerde" id="verde"></button>
+	</div>
+
+
+	<script>
+
+		function cambiarColor(color){
+			document.querySelector("body").className = color;
+			alert("El body ahora tiene la clase: " + color);
+		}
+
+		document.getElementById("rojo").onclick = function(){
+			cambiarColor("fondoRojo");
+		}
+
+		document.getElementById("amarillo").onclick = function(){
+			cambiarColor("fondoAmarillo");
+		}
+
+		document.getElementById("verde").onclick = function(){
+			cambiarColor("fondoVerde");
+		}
+
+
+	</script>
+
+</body>
+</html>

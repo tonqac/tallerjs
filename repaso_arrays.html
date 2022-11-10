@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		var numeros = [];
+		console.log(numeros.length);
+
+		numeros.push(10);
+		console.log(numeros.length);
+
+		console.log(numeros);
+
+		numeros.push(29);
+		console.log(numeros.length);
+
+		console.log(numeros);
+
+		numeros[2] = 80;
+		console.log(numeros.length);
+
+		console.log(numeros);
+
+		numeros.push(55);
+		console.log(numeros);
+
+		numeros[10] = 1;
+		console.log(numeros.length);
+		console.log(numeros);
+
+		numeros.pop();
+
+		console.log(numeros.length);
+		console.log(numeros);
+
+		numeros.push("hola");
+
+		console.log(numeros.length);
+		console.log(numeros);
+
+		//numeros[11] = numeros[10];
+
+		numeros.push(numeros[10]);
+
+
+		for(i=4;i<10;i++){
+			numeros[i+1] = i;
+		}
+
+		console.log(numeros.length);
+		console.log(numeros);
+
+	</script>
+
+</body>
+</html>

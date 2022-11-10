@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		
+		var barato= precio;
+		var productobarato;
+		var caro= 0;
+		var productocaro;
+		var ganancia= 0;
+		
+		var pedidos= prompt("Pedidos");
+
+		while (pedidos != "fin") {
+			var precio= parseInt(prompt("Precio"));
+			var cliente= prompt("Cliente");
+
+		 if (precio > caro) {
+		 	caro= precio;
+		 	productocaro= pedidos;
+		 }
+
+		 if (precio < barato) {
+		 	barato= precio;
+		 	productobarato= pedidos;
+		 }
+
+		 ganancia= ganancia + precio;
+
+		pedidos= prompt("Pedidos");
+		precio= parseInt(prompt("Precio"));
+		cliente= prompt("Cliente");
+		}
+
+		ganancia= Math.round((ganancia * 0.75) * 0.79,2);
+		document.write ("producto barato: " + productobarato+"<br> producto mas caro: " + productocaro + "·<br> ganancia: "  + ganancia);
+
+		
+	</script>
+</body>
+</html>

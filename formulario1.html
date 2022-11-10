@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		label{
+			display: block;
+			padding: 1em;
+		}
+	</style>
+</head>
+<body>
+
+	<form method="GET">
+
+		<label>
+			Nombre
+			<input type="text" placeholder="Ingresa tu nombre" name="nombre" value="">
+		</label>
+
+		<label>
+			Email
+			<input type="email" placeholder="Ingresa tu email" name="email" value="" required>
+		</label>
+
+		<label>
+			Edad
+			<input type="number" placeholder="Ingresa tu edad" name="edad" value="" required>
+		</label>
+
+		<label>
+			Gusto favorito de helado
+			<select name="gusto_favorito">
+				<option>Chocolate</option>
+				<option>Dulce de leche</option>
+				<option>Vainilla</option>
+				<option>Sambayón</option>
+				<option>Crema del cielo</option>
+			</select>
+		</label>
+		<label>
+			<button type="submit">Enviar encuesta</button>
+		</label>
+	</form>
+
+	<!--
+		<hr>
+
+		<input type="text">
+		<input type="email">
+		<input type="password">
+		<input type="number">
+		<input type="date">
+
+		------------
+
+		<input type="time">
+		<input type="datetime-local">
+	-->
+
+</body>
+</html>

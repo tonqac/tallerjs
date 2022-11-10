@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+		// Genero un bucle que se repite 10 veces
+		for(i=0; i<10; i++){
+
+			// Obtengo el 1er nro random
+			var num1 = Math.floor (Math.random()*(20-10+1))+10;
+
+			// Obtengo el 2do nro random
+			var num2 = Math.floor (Math.random()*(50-1+1))+1;
+
+			// Obtengo el mayor de ambos
+			var max = Math.max(num1,num2);
+
+			// Imprimo en pantalla
+			document.write("<p>Entre " + num1 + " y " + num2 + ", el nro mayor es " + max + "</p>");
+
+		} 
+
+
+	</script>
+
+</body>
+</html>

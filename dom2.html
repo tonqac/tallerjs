@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			padding: 1em
+		}
+
+		#cuadrado{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 20px 0;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+	<button id="boton">Ocultar</button>
+	<div id="cuadrado"></div>
+
+	<script>
+		
+		document.getElementById("boton").onclick = function(){
+
+			if(document.getElementById("cuadrado").style.display=="none"){
+				document.getElementById("cuadrado").style.display = "block";
+				document.getElementById("boton").innerHTML = "Ocultar";
+			}
+			else{
+				document.getElementById("cuadrado").style.display = "none";
+				document.getElementById("boton").innerHTML = "Mostrar";
+			}
+
+		}
+
+
+	</script>
+
+</body>
+</html>

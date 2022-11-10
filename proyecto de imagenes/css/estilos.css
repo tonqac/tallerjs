@@ -1,0 +1,17 @@
+p{
+	text-align: center;
+}
+
+button{
+	background-color: yellow;
+	padding: 1em 3em;
+	cursor: pointer;
+}
+
+img{
+	width: 500px;
+	height: 300px;
+	object-fit: cover;
+	border:1px solid #555;
+	border-radius:5px;
+}

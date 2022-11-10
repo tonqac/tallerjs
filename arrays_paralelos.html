@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+		var nombres = [];
+		var apellidos = [];
+		var telefonos = [];
+
+		for(i=0;i<4;i++){
+
+			var nombre_nuevo = prompt("decime tu nombre");
+			var apellido_nuevo = prompt("decime tu apellido");
+			var telefono_nuevo = prompt("decime tu telefono");
+
+			nombres[i] = nombre_nuevo;
+			apellidos[i] = apellido_nuevo;
+			telefonos[i] = telefono_nuevo;
+
+		}
+
+
+		// Elimino una posición y reacomodo todos los siguientes
+		//nombres.splice(2,1);
+		//apellidos.splice(2,1);
+		//telefonos.splice(2,1);
+
+		// Dejo vacia una posicion, sin afectar a los siguientes
+		//nombres[2] = "";
+		//apellidos[2] = "";
+		//telefonos[2] = "";
+
+		
+		for(i=0;i<nombres.length;i++){
+			document.write("El telefono de "+nombres[i]+" "+apellidos[i]+" es "+telefonos[i]+" <br>");
+		}
+
+
+
+	</script>
+
+</body>
+</html>

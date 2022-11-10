@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	// Defino un array donde voy a guardar cada ubicacion del cine
+	var entradas = [];
+
+	console.log(entradas);
+
+	// Inicializo las 50 posiciones en "libre"
+	for(i=1;i<51;i++){
+		entradas[i] = "LIBRE";
+	}
+
+	console.log(entradas);
+
+	// Vendo 10 entradas
+	for(i=0;i<10;i++){
+		var nombre = prompt("¿Como te llamas?");
+		var nro_entrada = parseInt(prompt("¿Que entrada queres?"));
+
+		entradas[nro_entrada] = nombre;
+	}
+
+	// Muestro todo el cine completo
+	for(i=1;i<51;i++){
+		document.write("El asiento: " + i + " está " + entradas[i] + "<br>");
+	}
+
+	
+
+</script>
+
+</body>
+</html>

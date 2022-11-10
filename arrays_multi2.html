@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		
+		var personas = [
+			["Pepe","Gonzalez",35],
+			["Juana","Castro",24],
+			["Jorge","Martinez",70],
+			["Paula","Fernandez",9],
+			["Sofia","Gimenez",1],
+			["Pepa","Pig",99]
+		];
+
+		var nombre_nuevo = prompt("Ingresa tu nombre");
+		var apellido_nuevo = prompt("Ingresa tu apellido");
+		var edad_nuevo = prompt("Ingresa tu edad");
+
+		personas.push( [nombre_nuevo,apellido_nuevo,edad_nuevo] );
+
+		/*
+		document.write(`<table border='1'>
+							<tr>
+								<td>`+personas[0][0]+`</td>
+								<td>`+personas[0][1]+`</td>
+								<td>`+personas[0][2]+`</td>
+							</tr>
+							<tr>
+								<td>`+personas[1][0]+`</td>
+								<td>`+personas[1][1]+`</td>
+								<td>`+personas[1][2]+`</td>
+							</tr>
+							<tr>
+								<td>`+personas[2][0]+`</td>
+								<td>`+personas[2][1]+`</td>
+								<td>`+personas[2][2]+`</td>
+							</tr>
+							<tr>
+								<td>`+personas[3][0]+`</td>
+								<td>`+personas[3][1]+`</td>
+								<td>`+personas[3][2]+`</td>
+							</tr>
+							<tr>
+								<td>`+personas[4][0]+`</td>
+								<td>`+personas[4][1]+`</td>
+								<td>`+personas[4][2]+`</td>
+							</tr>
+							<tr>
+								<td>`+personas[5][0]+`</td>
+								<td>`+personas[5][1]+`</td>
+								<td>`+personas[5][2]+`</td>
+							</tr>
+						</table>`); 
+
+		*/
+
+		var tabla_completa = "";
+
+		for(i=0;i<personas.length;i++){
+			tabla_completa += `
+								<tr>
+									<td>`+personas[i][0]+`</td>
+									<td>`+personas[i][1]+`</td>
+									<td>`+personas[i][2]+`</td>
+								</tr>
+								`;
+		}
+
+		document.write(`<table border='1'>
+							`+tabla_completa+`
+						</table>`); 
+	</script>
+
+</body>
+</html>

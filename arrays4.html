@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		// Inicializo los arrays
+		var p1 = [];
+		var p2 = [];
+		var p3 = [];
+
+		for(i=9;i<=20;i++){
+			p1[i] = "";
+			p2[i] = "";
+			p3[i] = "";
+		}
+
+		// Cargo la informacion de los clientes y turnos
+		var nombre = prompt("Ingresa el nombre del cliente");
+
+		while(nombre!="fin"){
+			var horario = parseInt(prompt("Ingresa el horario del turno"));
+
+			if(p1[horario]==""){
+				p1[horario] = nombre;
+			}
+			else{
+				if(p2[horario]==""){
+					p2[horario] = nombre;
+				}
+				else{
+					if(p3[horario]==""){
+						p3[horario] = nombre;
+					}
+					else{
+						alert("Lo sentimos, no tenemos disponible el horario: " + horario);
+					}
+				}
+			}
+
+			var nombre = prompt("Ingresa el nombre del cliente");
+		}
+
+
+		// Muestro todo en pantalla
+		for(i=9;i<=20;i++){
+			document.write("<br>El peluquero 1 en el horario: " + i + " tiene a: "+ p1[i]);
+			document.write("<br>El peluquero 2 en el horario: " + i + " tiene a: "+ p2[i]);
+			document.write("<br>El peluquero 3 en el horario: " + i + " tiene a: "+ p3[i]);
+			
+		}
+
+	</script>
+
+</body>
+</html>

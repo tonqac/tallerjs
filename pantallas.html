@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pantallas de juegos</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		section{
+			width: 100vw;
+			height: 100vh;
+			display: none;
+			text-align: center
+		}
+
+		h1{
+			padding: 1em
+		}
+
+		button{
+			background-color: #000;
+			color: #fff;
+			border: none;
+			padding: 1em 4em;
+			border-radius: 0.2em;
+			display: inline-block;
+			margin: 1em 0
+		}
+
+		input{
+			padding: 1em 2em;
+			text-align: center;
+		}
+
+		#pantalla1{
+			background-color: yellow;
+			display: block;
+		}
+
+		#pantalla2{
+			background-color: red
+		}
+
+		#pantalla3{
+			background-color: green
+		}
+	</style>
+</head>
+<body>
+
+	<section id="pantalla1">
+		<h1>Bienvenidos a mi super juego</h1>
+		<p>
+			<input type="text" placeholder="Ingresá tu nombre">
+		</p>
+		<p>
+			<button type="button" onclick="mostrarPantalla2()">Jugar!</button>
+		</p>
+	</section>
+
+	<section id="pantalla2">
+		<h1>Juego...</h1>
+		<p>
+			<button type="button" onclick="mostrarPantalla3()">Jugar!</button>
+		</p>
+	</section>
+
+	<section id="pantalla3">
+		<h1>¡Gracias por jugar!</h1>
+		<p>
+			<button type="button" onclick="mostrarPantalla1()">Jugar otra vez</button>
+		</p>
+	</section>
+
+	<script>
+
+		function mostrarPantalla1(){
+			document.querySelector("#pantalla3").style.display = "none";
+			document.querySelector("#pantalla1").style.display = "block";
+		}
+
+		function mostrarPantalla2(){
+			document.querySelector("#pantalla1").style.display = "none";
+			document.querySelector("#pantalla2").style.display = "block";
+		}
+
+		function mostrarPantalla3(){
+			document.querySelector("#pantalla2").style.display = "none";
+			document.querySelector("#pantalla3").style.display = "block";
+		}
+
+		/*
+		function mostrarPantalla(num){
+			var secciones = document.querySelectorAll("section");
+			for(seccion of secciones){
+				seccion.style.display = "none"
+			}
+
+			document.querySelector("#pantalla" + num).style.display = "block";
+		}
+		*/
+	</script>
+
+</body>
+</html>

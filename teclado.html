@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>
+		Estoy tocando la tecla: <span id="tecla"></span>
+	</h1>
+
+	<script type="text/javascript">
+			
+		document.onkeydown = function(event){
+			console.log(event);
+
+			document.querySelector("#tecla").innerHTML = event.key;
+
+			if(event.key=="ArrowRight"){
+				alert("Tocaste la flechita derecha");
+			}
+		}
+
+	</script>
+
+</body>
+</html>

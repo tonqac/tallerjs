@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		/*
+		Una zapatería ingresa 5 pares nuevos de calzado. Hacer un programa que le permita ingresar el modelo y la medida de cada uno. Al finalizar, mostrar en pantalla el modelo más grande ingresado.
+		*/
+
+		var mayor = 0;
+		var modelo_mayor = "";
+
+		for(i=0;i<5;i++){
+
+			var nombre = prompt("ingresá el nombre del modelo");
+			var medida = parseInt(prompt("ingresa la medida de la pata"));
+
+			if(medida > mayor){
+
+				mayor = medida;
+				modelo_mayor = nombre;
+
+			}
+
+		}
+
+		document.write("el tamaño mas grande es: " + mayor + " y el modelo es " + modelo_mayor);
+
+	</script>
+</body>
+</html>

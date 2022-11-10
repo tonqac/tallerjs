@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+
+	/*
+	7. Un estacionamiento desea conocer la cantidad de autos que pagan la cochera por mes. El total de vehículos que la cochera posee es de 10 autos, cada uno paga un importe distinto, y los tipos de pagos pueden ser: "mensual", "anual" o "exento". Hacer un programa que informe:
+
+	. Cuál es la recaudación por mes.
+	. Cuántos autos pagan por año.
+	. Cuánto se ganaría anualmente por los autos exentos de pago calculando que el precio mensual promedio es de $1000
+	*/
+
+	var anualcant = 0;
+	var ingremes = 0;
+	var ingreanual = 0;
+	var execant = 0;
+
+	for(i=1;i<11;i++){
+		var ingreso = parseInt(prompt("Ingrese el importe del Auto"));
+		var pago = prompt("Ingrese el Tipo de Pago - Anual/Exento/Mensual");
+
+		
+		switch(pago){
+			case "Anual":
+				anualcant = anualcant + 1;
+				ingreanual = ingreanual + ingreso;
+				break;
+
+			case "Mensual":
+				ingremes = ingremes + ingreso;
+				break;
+
+			case "Exento":
+				execant = execant + 1;
+				break;
+			
+			default:
+				alert("Tipo de Pago No Valido");
+				break;
+		}
+
+		document.write("<br>Auto N°" + i + ": $" + ingreso);
+	}
+
+	document.write("<br> Recaudacion por Mes: $" + ingremes + (ingreanual/12));
+	document.write("<br> Autos que Pagan por Año: " + anualcant);
+	document.write("<br> Ganancia final de Autos Exentos: $" + (execant * 1000));
+
+
+
+</script>
+
+</body>
+</html>

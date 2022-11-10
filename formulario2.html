@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		input, select{
+			border:1px solid #444;
+			padding: 1em;
+			width: 100%;
+			max-width: 40em;
+			margin: 2em auto;
+			text-align: center;
+			display: block;
+		}
+
+		button{
+			background-color: #080;
+			border:none;
+			padding: 1em 4em;
+			margin: 2em auto;
+			text-align: center;
+			display: block;
+			color: #fff;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+
+	<p>
+		<!-- CAMPO DE TEXTO -->
+		<input class="texto" type="text" placeholder="Ingresa tu nombre" id="nombre">
+	</p>
+
+	<p>
+		<select id="gusto_helado">
+			<option></option>
+			<option>Chocolate</option>
+			<option>Dulce de leche</option>
+			<option>Vainilla</option>
+			<option>Americana</option>
+			<option>Menta granizada</option>
+		</select>
+	</p>
+
+	<p>
+		<!-- BOTON QUE SE EJECUTA CUANDO SE HACE CLIC -->
+		<button id="btn">Obtener nombre</button>
+	</p>
+		
+	<script>
+
+		// Al hacer clic en el boton, se ejecuta lo que está dentro de esta funcion
+		document.getElementById("btn").onclick = function(){
+
+			// Obtengo el valor que ingresó el usuario en el campo nombre
+			var nombre = document.getElementById("nombre").value;
+
+			// Obtengo el valor que ingresó el usuario en el desplegable
+			var gusto_helado = document.getElementById("gusto_helado").value;
+
+			/*
+			var nombre = document.getElementsByTagName("input")[0].value;
+			var nombre = document.getElementsByClassName("texto")[0].value;
+			var nombre = document.querySelectorAll("input")[0].value;
+			*/
+
+			console.log(nombre);
+			console.warn(gusto_helado);
+			console.error(nombre, gusto_helado);
+		}
+
+		
+	</script>
+
+</body>
+</html>

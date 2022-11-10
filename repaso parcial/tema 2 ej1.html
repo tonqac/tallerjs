@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		/*
+		Sumar 3 números ingresados por el usuario. 
+		Si el resultado es impar, mostrarlo en negrita, sino mostrarlo en cursiva.
+		*/
+
+		/*
+		// ESTO NO SE HACE!!!!!!
+		USEN BUCLES HDPS!!!!
+		var num1 = parseInt(prompt("Ingresar un numero"));
+		var num2 = parseInt(prompt("Ingresar un numero"));
+		var num3 = parseInt(prompt("Ingresar un numero"));
+
+		var resultado = num1 + num2 + num3;
+		*/
+
+		var suma = 0;
+
+		for(i=0;i<3;i++){
+			var num = parseInt(prompt("Ingresar un numero"));
+			suma = suma + num;
+		}
+
+		if(suma%2==1){
+			document.write("<strong>"+suma+"</strong>");
+		}
+		else{
+			document.write("<em>"+suma+"</em>");
+		}
+
+
+		//(VARIABLE % 2 == 0) << PAR
+		//(VARIABLE % 2 == 1) << IMPAR
+
+	</script>
+</body>
+</html>

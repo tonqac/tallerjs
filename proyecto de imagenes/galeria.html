@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.fotos{
+			display: flex;
+		}
+
+		img.foto{
+			width: 20%;
+			height: 200px;
+			object-fit: cover;
+			object-position: 10px -10px;
+			border:1px solid #096;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="fotos">
+		<img id="foto1" class="foto" src="images/foto1.jpg" alt="Sailor Moon Otra cosa super copada">
+		<img class="foto" src="images/foto2.jpg" alt="Sailor Mars">
+		<img class="foto" src="images/foto3.jpg" alt="Sailor Mercury es la tercera y la mas inteligente">
+		<img class="foto" src="images/foto4.jpg" alt="Sailor Jupiter">
+		<img class="foto" src="images/foto5.jpg" alt="Sailor Venus">
+		<img class="foto" src="images/foto3.jpg" alt="Sailor Mercury esta repetida">
+		<img class="foto" src="images/foto4.jpg" alt="Sailor Jupiter tambien">
+	</div>
+
+	<script>
+		/*
+		Hacer un programa muestre en pantalla cinco imágenes con su correspondiente atributo "alt". Al hacer clic en cualquier imagen, mostrar un alert con el contenido de su atributo "alt".
+		*/
+		/*
+		var foto1 = document.getElementById("foto1");
+		var foto2 = document.getElementById("foto2");
+		var foto3 = document.getElementById("foto3");
+		var foto4 = document.getElementById("foto4");
+		var foto5 = document.getElementById("foto5");
+
+		foto1.onclick = foto2.onclick = foto3.onclick = foto4.onclick = foto5.onclick = function(){
+			var atributo_alt = this.getAttribute("alt")
+			alert(atributo_alt);
+		}
+		*/
+
+		var fotos = document.getElementsByClassName("foto"); // ==> Levanto todo lo que tenga la clase "foto"
+		//var fotos = document.getElementsByTagName("img"); // ==> Levanto todas las <img>
+		//var fotos = document.querySelectorAll("img.foto"); // ==> Levanto todo lo que cumpla con la misma regla del selector que usaria en CSS
+
+		for(i=0;i<fotos.length;i++){
+			fotos[i].onclick = function(){
+				var atributo_alt = this.getAttribute("alt")
+				alert(atributo_alt);
+			}
+		}
+
+	</script>
+
+</body>
+</html>

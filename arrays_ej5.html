@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		var frase = "MENEME"; //prompt("Ingresa una frase"); 
+
+		var frase_arr = frase.split("");
+
+		//console.log(frase_arr);
+
+		var mitad = Math.floor(frase_arr.length/2);
+
+		var capicua = true;
+
+		for(i=0;i<=mitad;i++){
+
+			var letra1 = frase_arr[i];
+			var letra2 = frase_arr[frase_arr.length-1-i];
+
+			if(letra1!=letra2){
+				capicua = false;
+			}
+
+		}
+
+		if(capicua==true){
+			document.write("La palabra " + frase + " ES CAPICUA.");
+		}
+		else{
+			document.write("La palabra " + frase + " NO ES CAPICUA.");	
+		}
+
+
+
+	</script>
+
+</body>
+</html>

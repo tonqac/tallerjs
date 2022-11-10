@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		div{
+			transition: 0.3s all ease;
+			width: 200px;
+			height: 200px;
+		}
+		.cuadrado{
+			background-color: red
+		}
+
+		.circulo{
+			background-color: black;
+			border-radius: 100%
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		// Hacer un programa que muestre un cuadrado rojo y al hacerle clic, lo convierta en un círculo negro (ver la propiedad "border-radius" y "transition" de css).
+
+		var cuadrado = document.createElement("div");
+		cuadrado.className = "cuadrado";
+
+		cuadrado.onclick = function(){
+			if(cuadrado.className=="cuadrado"){
+				cuadrado.className = "circulo";
+			}
+			else{
+				cuadrado.className = "cuadrado";	
+			}
+		}
+
+		document.querySelector("body").append(cuadrado);
+
+	</script>
+
+</body>
+</html>

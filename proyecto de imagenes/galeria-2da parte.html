@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.fotos{
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		img.foto{
+			width: 20%;
+			height: 200px;
+			object-fit: cover;
+			object-position: 10px -10px;
+			border:1px solid #096;
+			cursor: pointer;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="fotos"></div>
+
+	<script>
+
+		/*
+		Hacer un programa muestre en pantalla cinco imágenes con su correspondiente atributo "alt". Al hacer clic en cualquier imagen, mostrar un alert con el contenido de su atributo "alt".
+		*/
+		
+		var fotos = ["foto1.jpg","foto2.jpg","foto3.jpg","foto4.jpg","foto5.jpg"];
+		var texto = ["Sailor Moon","Sailor Mars","Sailor Mercury","Sailor Jupiter","Sailor Venus"];
+
+		var html_fotos = "";
+
+		for(i=0;i<fotos.length;i++){
+			html_fotos = html_fotos + "<img class='foto' src='images/"+fotos[i]+"' alt='"+texto[i]+"'>";
+		}
+
+		document.querySelector(".fotos").innerHTML = html_fotos;
+
+		var fotos_dom = document.querySelectorAll("img.foto");
+
+		for(i=0;i<fotos_dom.length;i++){
+			fotos_dom[i].onclick = function(){
+				var atributo_alt = this.getAttribute("alt")
+				alert(atributo_alt);
+			}
+		}
+
+		
+
+		
+
+	</script>
+
+</body>
+</html>

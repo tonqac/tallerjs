@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script>
+
+	/*
+	1. Una pizzería necesita un sistema que les permita registrar los pedidos diarios hasta ingresar la palabra "fin". 
+	Por cada pedido se deberá registrar el producto, el precio y el nombre del cliente. 
+	Al finalizar la carga, mostrar en pantalla 
+	> cuál fue el pedido más caro, 
+	> el más barato y 
+	> cuál fue la ganancia neta de la jornada teniendo en cuenta que por cada pedido se debe 
+	> restar el 25% por gastos varios (materias primas, sueldos, etc) 
+	> y de ese subtotal, restar el 21% por el IVA.
+	*/
+
+	
+	var precio = "hola";
+	var nombre_cliente = 9;
+
+	var mayor = 0;
+	var producto_mayor = "";
+
+	var menor = 9999999;
+	var producto_menor = "";
+
+	var ganancia_bruta = 0;
+
+	var producto = prompt("Ingrese el nombre del producto");
+
+	while(producto!="fin"){
+		
+		precio = parseInt(prompt("Ingrese el precio del producto"));
+		nombre_cliente = prompt("Ingrese nombre del cliente");
+
+		if(precio>mayor){
+			mayor = precio;
+			producto_mayor = producto;
+		}
+
+		if(precio<menor){
+			menor = precio;
+			producto_menor = producto;
+		}
+
+		ganancia_bruta = ganancia_bruta + precio;
+
+		producto = prompt("Ingrese el nombre del producto");
+	}
+
+	var gastos_varios = ganancia_bruta*0.25;
+	var ganancia_neta = ganancia_bruta - gastos_varios;
+
+	var iva = ganancia_neta * 0.21;
+	ganancia_neta = ganancia_neta - iva;
+
+	document.write("<br>El producto más caro fue:" + producto_mayor);
+	document.write("<br>El producto más barato fue:" + producto_menor);
+	document.write("<br>La ganancia bruta fue:" + ganancia_bruta);
+	document.write("<br>La ganancia neta fue:" + ganancia_neta);
+
+
+
+
+</script>
+
+</body>
+</html>

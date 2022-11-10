@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+	<script>
+		
+		var user = prompt("Ingresá el usuario");
+		var pass = prompt("Ingresá la contraseña");
+
+		if((user == "admin" && pass == 1234) || (user == "tester" && pass == "abc")){
+
+			document.write("<p style='color:green'> Bienvenido <strong> " + user + "</strong> </p>");
+
+		}
+
+		else{
+
+			document.write("<p style='color:red'>Error en el login</p>");
+
+		}
+
+	</script>
+</body>
+</html>

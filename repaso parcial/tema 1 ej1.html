@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		/*
+		h1{
+			text-align: left;
+		}
+
+		h2{
+			text-align: right;
+		}
+		*/
+	</style>
+</head>
+<body>
+
+	<script>
+		/*
+		1. Pedir 5 números al usuario y obtener el menor. 
+		Si el resultado es mayor a 10, mostrarlo alineado a la izquierda, 
+		sino mostrarlo alineado a la derecha.
+		*/
+
+		var menor = 999999999;
+
+		for(i=0;i<5;i++){
+			var numero = parseInt(prompt("Ingresa un numero"));
+
+			if(numero<menor){
+				menor = numero;
+			}
+		}
+
+		/*
+		if(menor > 10){
+			document.write("<h1>"+menor+"</h1>");
+		}
+		else{
+			document.write("<h2>"+menor+"</h2>");
+		}
+		*/
+
+		if(menor > 10){
+			document.write("<p style='text-align:left'>"+menor+"</p>");
+		}
+		else{
+			document.write("<p style='text-align:right'>"+menor+"</p>");
+		}
+
+	</script>
+</body>
+</html>
